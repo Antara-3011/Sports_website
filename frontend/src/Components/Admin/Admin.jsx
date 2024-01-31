@@ -1,5 +1,5 @@
 import Card from "../Card/Card";
-
+import Footer from "../Footer/Footer";
 const Admin = () => {
   return (
     <>
@@ -15,6 +15,9 @@ const Admin = () => {
         <Card name={"More details"} />
         <Card name={"More details"} />
         <Card name={"More details"} />
+      </div>
+      <div className="mt-5">
+        <Footer />
       </div>
     </>
   );
