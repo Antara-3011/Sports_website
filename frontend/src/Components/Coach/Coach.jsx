@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
-import Update from "../Updates/Update";
+
 const Coach = () => {
   const announcements = [
     "Announcement 1",
@@ -24,9 +24,9 @@ const Coach = () => {
         </p>
       </div>
       <div className="flex justify-between">
-        <Card />
-        <Card />
-        <Card />
+        <Card name={"Click here to Register"} />
+        <Card name={"Click here to Register"} />
+        <Card name={"Click here to Register"} />
       </div>
       <div className="flex justify-center items-center">
         <p className="text-3xl bg-gray-200 p-6 rounded-xl">

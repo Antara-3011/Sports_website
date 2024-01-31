@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-const Card = () => {
+const Card = ({ name }) => {
   const navigate = useNavigate();
   const handleButton = () => {
     navigate("/coach/tournament");
@@ -21,7 +21,7 @@ const Card = () => {
           <p>Reg. Deadline?</p>
           <div className="card-actions justify-end mt-4">
             <button className="btn btn-primary" onClick={handleButton}>
-              Click here to Register
+              {name}
             </button>
           </div>
         </div>

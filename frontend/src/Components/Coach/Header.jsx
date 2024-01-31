@@ -55,8 +55,10 @@ const Header = () => {
           </svg>
           <a className="btn btn-ghost text-xl">Martial Tour</a>
         </div>
+        {/* upload */}
         <div className="flex-none">
           <div className="dropdown dropdown-end">
+            {/* approve request */}
             <div
               tabIndex={0}
               role="button"
