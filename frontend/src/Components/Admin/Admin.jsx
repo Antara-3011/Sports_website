@@ -11,7 +11,7 @@ const Admin = () => {
           UPCOMING EVENTS <span className="text-sm">see all</span>
         </p>
       </div>
-      <div>
+      <div className="flex justify-between">
         <Card name={"More details"} />
         <Card name={"More details"} />
         <Card name={"More details"} />
