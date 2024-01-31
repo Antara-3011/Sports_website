@@ -1,0 +1,9 @@
+.two-column-layout {
+  display: flex;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.tform-body {
+  margin: 2rem 2.5rem;
+  padding: 1rem;
+}
