@@ -13,11 +13,7 @@ const Admin = () => {
       </div>
       <div>
         <Card name={"More details"} />
-      </div>
-      <div>
         <Card name={"More details"} />
-      </div>
-      <div>
         <Card name={"More details"} />
       </div>
     </>
