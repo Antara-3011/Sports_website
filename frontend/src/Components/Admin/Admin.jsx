@@ -1,5 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
+const handleTournament = () => {
+  navigate("/coach/tournamentform");
+};
 const Admin = () => {
   return (
     <>
@@ -15,6 +19,14 @@ const Admin = () => {
         <Card name={"More details"} />
         <Card name={"More details"} />
         <Card name={"More details"} />
+      </div>
+      <div className="flex justify-center items-center">
+        <button
+          className="text-3xl bg-gray-200 p-6 rounded-xl"
+          onClick={handleTournament}
+        >
+          CREATE TOUNAMENT
+        </button>
       </div>
       <div className="mt-5">
         <Footer />

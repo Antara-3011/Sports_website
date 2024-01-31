@@ -7,6 +7,7 @@ import Home from "../Components/home.jsx";
 import Signup from "../Components/SignUp/Signup.jsx";
 import Profile from "../Components/Coach/Profile.jsx";
 import Tournament from "../Components/Coach/Tournament/Tournament.jsx";
+import TournamentForm from "../Components/Coach/Tournament/TournamentCreateform.jsx";
 const RoutesModule = () => {
   return (
     <>
@@ -19,6 +20,7 @@ const RoutesModule = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/coach-profile" element={<Profile />} />
         <Route path="/coach/tournament" element={<Tournament />} />
+        <Route path="/coach/tournamentform" element={<TournamentForm />} />
         {/* <Route path="*" element={<PageNotFound />} /> */}
       </Routes>
     </>
