@@ -20,7 +20,7 @@ const RoutesModule = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/coach-profile" element={<Profile />} />
         <Route path="/coach/tournament" element={<Tournament />} />
-        <Route path="/coach/tournamentform" element={<TournamentForm />} />
+        <Route path="/admin/tournament/form" element={<TournamentForm />} />
         {/* <Route path="*" element={<PageNotFound />} /> */}
       </Routes>
     </>

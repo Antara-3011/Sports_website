@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
-const handleTournament = () => {
-  navigate("/coach/tournamentform");
-};
+
 const Admin = () => {
+  const navigate = useNavigate();
+  const handleTournament = () => {
+    navigate("/admin/tournament/form");
+  };
   return (
     <>
       <p className="font-bold font-serif text-5xl p-5">
