@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
-import Update from "../Updates/Update";
+
 const Coach = () => {
   const announcements = [
     "Announcement 1",

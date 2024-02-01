@@ -21,7 +21,7 @@ const Card = ({ name }) => {
           <p>Reg. Deadline?</p>
           <div className="card-actions justify-end mt-4">
             <button className="btn btn-primary" onClick={handleButton}>
-              <p>{name}</p>
+              {name}
             </button>
           </div>
         </div>

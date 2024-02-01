@@ -1,37 +1,102 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 const Signup = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const [errors, setErrors] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
   const [selectedRole, setSelectedRole] = useState("Admin");
   const navigate = useNavigate();
-  const handleLogin = () => {
-    if (selectedRole === "Admin") {
-      navigate("/admin");
-    } else if (selectedRole === "Coach") {
-      navigate("/coach");
-    } else if (selectedRole === "Athlete") {
-      navigate("/athlete");
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = { username: "", email: "", password: "" };
+
+    // Validate username
+    if (formData.username.trim() === "") {
+      newErrors.username = "Username is required";
+      isValid = false;
+    }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Invalid email address";
+      isValid = false;
+    }
+
+    // Validate password
+    if (formData.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      // Perform sign-up logic here (e.g., send data to server)
+      console.log("Form is valid. Submitting data:", formData);
+      if (selectedRole === "Admin") {
+        navigate("/admin");
+      } else if (selectedRole === "Coach") {
+        navigate("/coach");
+      } else if (selectedRole === "Athlete") {
+        navigate("/athlete");
+      }
+    } else {
+      console.log("Form is not valid. Please fix errors.");
     }
   };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // const [selectedRole, setSelectedRole] = useState("Admin");
+  // const navigate = useNavigate();
+  // const handleLogin = () => {
+  //   if (selectedRole === "Admin") {
+  //     navigate("/admin");
+  //   } else if (selectedRole === "Coach") {
+  //     navigate("/coach");
+  //   } else if (selectedRole === "Athlete") {
+  //     navigate("/athlete");
+  //   }
+  // };
   return (
     <>
-      <form id="loginForm">
+      <form id="loginForm" onSubmit={handleSubmit}>
         <p className="text-4xl font-bold">Create Account</p>
-        <label htmlFor="name" className="form-control w-full max-w-xs">
+        <label htmlFor="username" className="form-control w-full max-w-xs">
           <div className="label">
             <span className="label-text">Name</span>
           </div>
           <input
             type="text"
-            id="name"
-            value={name}
+            id="username"
+            name="username"
+            value={formData.username}
             placeholder="Type here"
             className="input input-bordered w-full max-w-xs"
-            onChange={(e) => setName(e.target.value)}
+            onChange={handleChange}
           />
+          <p className="error">{errors.username}</p>
         </label>
+
         <label htmlFor="email" className="form-control w-full max-w-xs">
           <div className="label">
             <span className="label-text">Email</span>
@@ -39,24 +104,29 @@ const Signup = () => {
           <input
             type="email"
             id="email"
-            value={email}
+            name="email"
+            value={formData.email}
             placeholder="Type here"
             className="input input-bordered w-full max-w-xs"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleChange}
           />
+          <p className="error">{errors.email}</p>
         </label>
-        <label htmlFor="email" className="form-control w-full max-w-xs">
+
+        <label htmlFor="password" className="form-control w-full max-w-xs">
           <div className="label">
             <span className="label-text">Password</span>
           </div>
           <input
             type="password"
             id="password"
-            value={password}
+            name="password"
+            value={formData.password}
             placeholder="Type here"
             className="input input-bordered w-full max-w-xs"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handleChange}
           />
+          <p className="error">{errors.password}</p>
         </label>
         <div>
           <label htmlFor="role" className="label-text ">
@@ -77,7 +147,6 @@ const Signup = () => {
         <button
           className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-6 mb-6 w-80 bg-cyan-600 text-white"
           type="submit"
-          onClick={handleLogin}
         >
           Create Account
         </button>
