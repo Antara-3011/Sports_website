@@ -7,3 +7,6 @@
   margin: 2rem 2.5rem;
   padding: 1rem;
 }
+.error {
+  color: red;
+}
