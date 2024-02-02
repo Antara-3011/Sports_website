@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        "landing-img": "url('/public/Images/bg1.jpg')",
+      }),
+    },
   },
   plugins: [require("daisyui")],
 };
