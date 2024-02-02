@@ -1,8 +1,3 @@
-const Athlete = () => {
-  return (
-    <>
-      <h1>Welcome, Athlete ...</h1>
-    </>
-  );
-};
+const Athlete = () => {};
+
 export default Athlete;
