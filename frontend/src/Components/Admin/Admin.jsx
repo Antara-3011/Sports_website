@@ -9,6 +9,16 @@ const Admin = () => {
   };
   return (
     <>
+      <nav className="bg-indigo-700 shadow-lg">
+        <div className="container mx-auto">
+          <div className="sm:flex">
+            <a href="#" className="text-gray-900 text-3xl font-bold p-3">
+              XYZ Company
+            </a>
+            <a href="#" className=""></a>
+          </div>
+        </div>
+      </nav>
       <p className="font-bold font-serif text-5xl p-5">
         <h1>Hey!!! XYZ Admin </h1>
       </p>
