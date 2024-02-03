@@ -1,0 +1,32 @@
+.right-column {
+  flex: 0.75;
+  padding: 16px;
+  margin-left: 1rem;
+  margin-right: 2.5rem;
+  background-color: #f0f0f0;
+}
+.info-coach {
+  background-color: gainsboro;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+.btn-dwld {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  border-radius: 10px;
+}
+.event-card {
+  margin: 0.5rem 1rem;
+  padding: 1rem;
+  height: 6rem;
+  width: 15rem;
+  border-radius: 10px;
+}
+.venue {
+  margin: 1rem 1rem;
+  padding: 1rem;
+  background-color: aliceblue;
+  height: 20rem;
+}
