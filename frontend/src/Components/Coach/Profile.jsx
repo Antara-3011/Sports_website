@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Input from "../../Shared/Input";
 import Footer from "../Footer/Footer";
-import "./Tournament/main.css";
+import "./CoachTournament/main.css";
 
 const Profile = () => {
   const [formData, setFormData] = useState({
