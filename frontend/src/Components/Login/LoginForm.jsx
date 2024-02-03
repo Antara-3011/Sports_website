@@ -10,6 +10,10 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
+    if (!email || !password || !selectedRole) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
     if (selectedRole === "Admin") {
       navigate("/admin");
     } else if (selectedRole === "Coach") {
@@ -101,15 +105,6 @@ const LoginForm = () => {
             Sign Up
           </Link>
         </p>
-
-        <div className="social-login mt-5">
-          <button className="bg-blue-500 text-white py-2 px-4 rounded-md mr-2 hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">
-            Google
-          </button>
-          <button className="bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:border-indigo-300">
-            Facebook
-          </button>
-        </div>
       </form>
     </>
   );
