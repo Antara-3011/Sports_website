@@ -1,14 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "../Components/Login/Login.jsx";
-import Admin from "../Components/Admin/Admin.jsx";
+import Admin from "../Components/AdminPage/Admin.jsx";
 import Coach from "../Components/Coach/Coach.jsx";
 import Athlete from "../Components/Athlete/Athlete.jsx";
 import Home from "../Components/home.jsx";
 import Signup from "../Components/SignUp/Signup.jsx";
 import Profile from "../Components/Coach/Profile.jsx";
-import Tournament from "../Components/Coach/Tournament/Tournament.jsx";
-import Tform from "../Components/Coach/Tournament/Register/Tform.jsx";
-import TournamentForm from "../Components/Coach/Tournament/TournamentCreateform.jsx";
+import CoachTour from "../Components/Coach/CoachTournament/CoachTour.jsx";
+import Tform from "../Components/Coach/CoachTournament/Register/Tform.jsx";
+import TournamentForm from "../Components/AdminPage/AdminTournament/TournamentCreateform.jsx";
+import AdminTour from "../Components/AdminPage/AdminTournament/AdminTour.jsx";
 const RoutesModule = () => {
   return (
     <>
@@ -20,7 +21,8 @@ const RoutesModule = () => {
         <Route path="/athlete" element={<Athlete />} />
         <Route path="/login" element={<Login />} />
         <Route path="/coach-profile" element={<Profile />} />
-        <Route path="/coach/tournament" element={<Tournament />} />
+        <Route path="/coach/tournament" element={<CoachTour />} />
+        <Route path="/admin/tournament" element={<AdminTour />} />
         <Route path="/admin/tournament/form" element={<TournamentForm />} />
         <Route path="/coach/tournament/register" element={<Tform />} />
         {/* <Route path="*" element={<PageNotFound />} /> */}

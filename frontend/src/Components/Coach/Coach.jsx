@@ -24,9 +24,9 @@ const Coach = () => {
         </p>
       </div>
       <div className="flex justify-between">
-        <Card name={"Click here to Register"} />
-        <Card name={"Click here to Register"} />
-        <Card name={"Click here to Register"} />
+        <Card name={"Click here to Register"} address={"/coach/tournament"} />
+        <Card name={"Click here to Register"} address={"/coach/tournament"} />
+        <Card name={"Click here to Register"} address={"/coach/tournament"} />
       </div>
       <div className="flex justify-center items-center">
         <p className="text-3xl bg-gray-200 p-6 rounded-xl">

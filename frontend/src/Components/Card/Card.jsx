@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-const Card = ({ name }) => {
+const Card = ({ name, address }) => {
   const navigate = useNavigate();
   const handleButton = () => {
-    navigate("/coach/tournament");
+    navigate(address);
   };
   return (
     <>
