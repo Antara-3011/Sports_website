@@ -1,165 +1,227 @@
 import React from "react";
-import martialArts from "../../../Images/martialarts.jpg";
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+
 export default function TournamentCreateform() {
+  const navigate = useNavigate();
+  const [tournamentName, setTournamentName] = useState("");
+  const [tournamentID, setTournamentID] = useState("");
+  const [tournamentDate, setTournamentDate] = useState("");
+  const [tournamentVenue, setTournamentVenue] = useState("");
+  const [registrationStart, setregistrationStart] = useState("");
+  const [registrationEnd, setregistrationEnd] = useState("");
+  const [hName, sethName] = useState("");
+  const [hEmail, sethEmail] = useState("");
+  const [hMobile, sethMobile] = useState("");
+  const handleCreate = () => {
+    if (tournamentName.length == 0) {
+      alert("Invalid form,tournament name can not be empty");
+      return;
+    }
+    if (tournamentID.length == 0) {
+      alert("Invalid Form, Tournament ID can not be empty");
+      return;
+    }
+    if (tournamentVenue.length == 0) {
+      alert("Invalid Form,Tournament Venue can not be empty");
+      return;
+    }
+    if (tournamentDate.length == 0) {
+      alert("Invalid Form,Tournament Date can not be empty");
+      return;
+    }
+    if (registrationStart.length == 0) {
+      alert("Invalid Form,Tournament  start date can not be empty");
+      return;
+    }
+    if (registrationEnd.length == 0) {
+      alert("Invalid Form,Tournament End date can not be empty");
+      return;
+    }
+    if (hName.length == 0) {
+      alert("Invalid Form,name can not be empty");
+      return;
+    }
+    if (hEmail.length == 0) {
+      alert("Invalid Form,email can not be empty");
+      return;
+    }
+    if (hMobile.length == 0) {
+      alert("Invalid Form,mobile number can not be empty");
+      return;
+    }
+    navigate("/admin");
+  };
+
   return (
     <div className="flex flex-col justify-center h-full items-center bg-lime-200">
       <h1 className="font-bold text-2xl mt-10">Create Tournament</h1>
-      <form className="max-w-4xl mx-auto">
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <form className="max-w-4xl mx-auto rounded-lg bg-slate-300">
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               for="tournament-name"
             >
               Tournament Name
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="tournament-name"
               type="text"
-              placeholder="Jane"
+              placeholder=""
+              onChange={(e) => setTournamentName(e.target.value)}
             />
-            <p class="text-red-500 text-xs italic">
+            {/* <p className="text-red-500 text-xs italic">
               Please fill out this field.
-            </p>
+            </p> */}
           </div>
-          <div class="w-full md:w-1/2 px-3">
+          <div className="w-full md:w-1/2 px-3">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               for="tournament-id"
             >
               Tournament ID
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="tournament-id"
               type="text"
-              placeholder="Doe"
+              placeholder=""
+              onChange={(e) => setTournamentID(e.target.value)}
             />
           </div>
         </div>
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               for="doe"
             >
               Date Of Event
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="doe"
               type="date"
-              placeholder="Jane"
+              placeholder=""
+              onChange={(e) => setTournamentDate(e.target.value)}
             />
-            <p class="text-red-500 text-xs italic">
+            {/* <p className="text-red-500 text-xs italic">
               Please fill out this field.
-            </p>
+            </p> */}
           </div>
-          <div class="w-full md:w-1/2 px-3">
+          <div className="w-full md:w-1/2 px-3">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               for="venue"
             >
               Venue
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="venue"
               type="text"
-              placeholder="Doe"
+              placeholder=""
+              onChange={(e) => setTournamentVenue(e.target.value)}
             />
           </div>
         </div>
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               for="rsd"
             >
               Registration Start date
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="rsd"
               type="date"
-              placeholder="Jane"
+              placeholder=""
+              onChange={(e) => setregistrationStart(e.target.value)}
             />
-            <p class="text-red-500 text-xs italic">
+            {/* <p className="text-red-500 text-xs italic">
               Please fill out this field.
-            </p>
+            </p> */}
           </div>
-          <div class="w-full md:w-1/2 px-3">
+          <div className="w-full md:w-1/2 px-3">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               for="red"
             >
               Registration End date
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="red"
               type="date"
-              placeholder="Doe"
+              placeholder=""
+              onChange={(e) => setregistrationEnd(e.target.value)}
             />
           </div>
         </div>
         <h1 className="font-bold p-1 mb-4">Single Point of Contact</h1>
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               for="hname"
             >
               Name
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="hname"
               type="text"
-              placeholder="Jane"
+              placeholder=""
+              onChange={(e) => sethName(e.target.value)}
             />
-            <p class="text-red-500 text-xs italic">
+            {/* <p className="text-red-500 text-xs italic">
               Please fill out this field.
-            </p>
+            </p> */}
           </div>
-          <div class="w-full md:w-1/2 px-3">
+          <div className="w-full md:w-1/2 px-3">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               for="hemail"
             >
               Email
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="hemail"
               type="email"
               placeholder=""
+              onChange={(e) => sethEmail(e.target.value)}
             />
           </div>
         </div>
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-first-name"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              for="ph-number"
             >
-              First Name
+              Mobile number
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              id="grid-first-name"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="ph-number"
               type="text"
-              placeholder="Jane"
+              placeholder=""
+              onChange={(e) => sethMobile(e.target.value)}
             />
-            <p class="text-red-500 text-xs italic">
+            {/* <p className="text-red-500 text-xs italic">
               Please fill out this field.
-            </p>
+            </p> */}
           </div>
         </div>
         <button
           type="submit"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mr-96"
+          className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-6 mb-6 w-40 bg-cyan-600 text-white ml-auto"
+          onClick={handleCreate}
         >
           Submit
         </button>
