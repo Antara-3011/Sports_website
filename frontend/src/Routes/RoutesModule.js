@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Form } from "react-router-dom";
 import Login from "../Components/Login/Login.jsx";
 import Admin from "../Components/AdminPage/Admin.jsx";
 import Coach from "../Components/Coach/Coach.jsx";
@@ -9,6 +9,7 @@ import Profile from "../Components/Coach/Profile.jsx";
 import CoachTour from "../Components/Coach/CoachTournament/CoachTour.jsx";
 import Tform from "../Components/Coach/CoachTournament/Register/Tform.jsx";
 import TournamentForm from "../Components/AdminPage/AdminTournament/TournamentCreateform.jsx";
+import AthleteForm from "../Components/Athlete/AthleteForm.jsx";
 import AdminTour from "../Components/AdminPage/AdminTournament/AdminTour.jsx";
 const RoutesModule = () => {
   return (
@@ -25,6 +26,7 @@ const RoutesModule = () => {
         <Route path="/admin/tournament" element={<AdminTour />} />
         <Route path="/admin/tournament/form" element={<TournamentForm />} />
         <Route path="/coach/tournament/register" element={<Tform />} />
+        <Route path="/athlete/form" element={<AthleteForm />} />
         {/* <Route path="*" element={<PageNotFound />} /> */}
       </Routes>
     </>
