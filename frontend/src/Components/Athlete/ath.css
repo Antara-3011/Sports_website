@@ -1,7 +1,7 @@
 .ath-profile {
-  width: 60rem;
-  display: flex;
+  width: 70rem;
 }
 form {
   width: 100%;
+  max-width: 900px;
 }
