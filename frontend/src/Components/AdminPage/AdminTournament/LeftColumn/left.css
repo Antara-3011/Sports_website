@@ -1,11 +1,11 @@
-.left-column {
+.left-column-admin {
   flex: 0.25;
   padding: 16px;
   margin-left: 2.5rem;
   margin-right: 1rem;
   background-color: #e0e0e0;
 }
-.btn-left {
+.btn-left-admin {
   background-color: black;
   color: white;
   padding: 1rem;
@@ -13,7 +13,7 @@
   margin: 0.5rem;
   width: 15rem;
 }
-.details-coach {
+.details-admin {
   background-color: beige;
   padding: 1rem;
   border-radius: 10px;

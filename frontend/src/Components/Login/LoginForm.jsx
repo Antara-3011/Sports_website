@@ -24,7 +24,7 @@ const LoginForm = () => {
   };
   return (
     <>
-      <form id="loginForm">
+      <form id="loginForm" className="login-form">
         <p className="text-4xl font-bold">Login</p>
         <p className="text-gray-400 mt-3 mb-3">
           Please enter your login details to signin
