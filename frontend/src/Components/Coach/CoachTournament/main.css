@@ -10,7 +10,7 @@
 .error {
   color: red;
 }
-.main-data {
+.main-data-coach-profile {
   width: 75rem;
 }
 .about-data {
@@ -18,4 +18,23 @@
   font-size: x-large;
   display: flex;
   flex-direction: column;
+}
+.coach-profile-form {
+  /* margin: 4rem 3rem; */
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.coach-form {
+  width: 100%;
+  max-width: 75rem;
+  margin: 2.5rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
 }

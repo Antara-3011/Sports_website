@@ -1,6 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
+import tour1 from "../../Images/tour1.jpg";
+import tour2 from "../../Images/tour2.jpg";
+import tour3 from "../../Images/tour3.jpg";
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -77,9 +80,30 @@ const Admin = () => {
         </p>
       </div>
       <div className="flex justify-between">
-        <Card name={"More details"} address={"/admin/tournament"} />
-        <Card name={"More details"} address={"/admin/tournament"} />
-        <Card name={"More details"} address={"/admin/tournament"} />
+        <Card
+          name={"More details"}
+          image={tour1}
+          tourname={"Dojo Inhouse Tournament"}
+          dos={"February 10, 2024"}
+          venue={"Kenwyn Martial arts centre, South Africa"}
+          address={"/admin/tournament"}
+        />
+        <Card
+          name={"More details"}
+          image={tour2}
+          tourname={"Inter District Open Karate Championship"}
+          dos={"February 11, 2024"}
+          venue={"TDP Hall, near India Spring School, India"}
+          address={"/admin/tournament"}
+        />
+        <Card
+          name={"More details"}
+          image={tour3}
+          tourname={"Eagles Karate Challenge"}
+          dos={"February 17, 2024"}
+          venue={"Tshwane Korfball Park, South Africa"}
+          address={"/admin/tournament"}
+        />
       </div>
       <div className="flex justify-center items-center">
         <button

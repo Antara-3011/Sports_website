@@ -44,7 +44,7 @@ const Profile = () => {
       </div>
 
       {isSubmitted ? (
-        <div className="flex justify-center p-5 my-10 mx-10 border main-data">
+        <div className="flex justify-center items-center p-5 my-10 mx-10 border  main-data-coach-profile">
           <div className="about-data">
             <div className="flex">
               <p className="mr-3 font-semibold font-serif">Name:</p>
@@ -77,54 +77,56 @@ const Profile = () => {
         </div>
       ) : (
         isEditMode && (
-          <form onSubmit={handleLogin}>
-            <div className="">
-              <Input
-                type="text"
-                name="name"
-                value={formData.name}
-                placeholder="Type here"
-                label="Name"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="mt-4">
-              <Input
-                type="email"
-                name="email"
-                value={formData.email}
-                placeholder="Type here"
-                label="Email"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="mt-4">
-              <Input
-                type="number"
-                name="contact"
-                value={formData.contact}
-                placeholder="Type here"
-                label="Contact"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="mt-4">
-              <Input
-                type="text"
-                name="clubName"
-                value={formData.clubName}
-                placeholder="Type here"
-                label="Club Name"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <button
-                type="submit"
-                className="p-3 mt-5 w-80 bg-green-500 rounded-xl text-white"
-              >
-                Save
-              </button>
+          <form onSubmit={handleLogin} className="coach-form">
+            <div className="coach-profile-form">
+              <div className="w-80">
+                <Input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  placeholder="Type here"
+                  label="Name"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="mt-4 w-80">
+                <Input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  placeholder="Type here"
+                  label="Email"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="mt-4 w-80">
+                <Input
+                  type="number"
+                  name="contact"
+                  value={formData.contact}
+                  placeholder="Type here"
+                  label="Contact"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="mt-4 w-80">
+                <Input
+                  type="text"
+                  name="clubName"
+                  value={formData.clubName}
+                  placeholder="Type here"
+                  label="Club Name"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  className="p-3 mt-5 w-80 bg-green-500 rounded-xl text-white"
+                >
+                  Save
+                </button>
+              </div>
             </div>
           </form>
         )
