@@ -23,14 +23,14 @@
   /* margin: 4rem 3rem; */
   display: flex;
   flex-direction: column;
-  background-color: aqua;
+
   justify-content: center;
   align-items: center;
   padding: 1rem;
 }
 .coach-form {
   width: 100%;
-  max-width: 75rem;
+  max-width: 74rem;
   margin: 2.5rem;
   padding: 1.5rem;
   display: flex;

@@ -36,6 +36,10 @@ const Newform = () => {
               <Input type={"date"} placeholder={"Type here"} />
             </div>
             <div className="flex items-center new-form-coach">
+              <p className="mr-3">Experience: </p>
+              <Input type={"number"} placeholder={"Type here"} />
+            </div>
+            <div className="flex items-center new-form-coach">
               <p className="mr-3">Weight: </p>
               <Input type={"number"} placeholder={"Type here"} />
             </div>
