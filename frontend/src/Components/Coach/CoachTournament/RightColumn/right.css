@@ -6,10 +6,11 @@
   /* background-color: #f0f0f0; */
 }
 .info-coach {
-  background-color: white;
+  background-color: aliceblue;
   padding: 1.5rem;
   margin: 1rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-radius: 10px;
 }
 .btn-dwld-coach {
   background-color: rgb(143, 103, 245);
