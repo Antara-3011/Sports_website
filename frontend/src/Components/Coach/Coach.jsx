@@ -18,7 +18,7 @@ const Coach = () => {
       <div>
         <Header />
         <p className="font-bold font-serif text-5xl p-5">
-          Welcome, <span>...</span>
+          Welcome, <span>Sai</span>
         </p>
       </div>
       <div className="flex justify-center items-center">
