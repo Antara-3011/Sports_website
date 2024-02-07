@@ -8,7 +8,7 @@ import Signup from "../Components/SignUp/Signup.jsx";
 import Profile from "../Components/Coach/Profile.jsx";
 import Tournament from "../Components/Coach/Tournament/Tournament.jsx";
 import Tform from "../Components/Coach/Tournament/Register/Tform.jsx";
-import TournamentForm from "../Components/Coach/Tournament/TournamentCreateform.jsx";
+import TournamentForm from "../Components/Admin/Tournament/TournamentCreateform.jsx";
 import AdminTour from "../Components/Admin/Admin_tournamet/AdminTour.jsx";
 const RoutesModule = () => {
   return (
