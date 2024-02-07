@@ -11,9 +11,7 @@ import Tform from "../Components/Coach/CoachTournament/Register/Tform.jsx";
 import TournamentForm from "../Components/AdminPage/AdminTournament/TournamentCreateform.jsx";
 import AthleteForm from "../Components/Athlete/AthleteForm.jsx";
 import AdminTour from "../Components/AdminPage/AdminTournament/AdminTour.jsx";
-import Tform from "../Components/Coach/Tournament/Register/Tform.jsx";
-import TournamentForm from "../Components/Admin/Tournament/TournamentCreateform.jsx";
-import AdminTour from "../Components/Admin/Admin_tournamet/AdminTour.jsx";
+
 const RoutesModule = () => {
   return (
     <>
