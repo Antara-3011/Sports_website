@@ -30,7 +30,7 @@ const RightColumn = () => {
   };
   return (
     <>
-      <div className="right-column ">
+      <div className="right-column-admin ">
         {/* <div className="info-coach">
           <p className="font-bold font-serif text-xl">
             General Information
@@ -46,12 +46,12 @@ const RightColumn = () => {
             et elit. Vivamus ornare posuere odio vestibulum gravida. Donec eros.
           </p>
         </div> */}
-        <div className="info-coach">
+        <div className="info-admin">
           <p className="font-bold font-serif text-xl">
             General Information
             {!isEditing && (
               <span
-                className="text-sm ml-2 text-blue-600 font-normal font-mono cursor-pointer"
+                className="text-sm ml-2 text-blue-900 font-normal font-mono cursor-pointer"
                 id="edit-button"
                 onClick={handleEditClick}
               >
@@ -80,7 +80,7 @@ const RightColumn = () => {
           )}
         </div>
 
-        <div className="info-coach">
+        <div className="info-admin">
           <label htmlFor="fileInput" className="mr-3 font-semibold">
             Upload a PDF:
           </label>
@@ -98,14 +98,42 @@ const RightColumn = () => {
             Submit PDF
           </button>
         </div>
-
+        <div className="flex">
+          <p className="text-xl font-bold ml-5">Events: </p>
+          <p
+            className="text-md ml-10 text-blue-900 font-semibold cursor-pointer"
+            id="edit-button"
+          >
+            New Event
+          </p>
+          <p
+            className="text-md ml-5 text-blue-900 font-semibold cursor-pointer"
+            id="edit-button"
+          >
+            Import Event
+          </p>
+          <p
+            className="text-md ml-5 text-blue-900 font-semibold cursor-pointer"
+            id="edit-button"
+          >
+            Event Settings
+          </p>
+        </div>
         <div className="flex">
           <Event />
           <Event />
           <Event />
         </div>
-        <div className="venue">
-          <p className="font-bold text-xl">Venue</p>
+        <div className="venue-admin">
+          <p className="font-bold text-xl">
+            Venue{" "}
+            <span
+              className="text-sm ml-2 text-blue-900 font-semibold cursor-pointer"
+              id="edit-button"
+            >
+              Edit venue
+            </span>
+          </p>
           <p>map</p>
         </div>
       </div>

@@ -71,8 +71,8 @@ const Admin = () => {
           </div>
         </div>
       </nav>
-      <p className="font-bold font-serif text-5xl p-5">
-        <h1>Hey!!! XYZ Admin </h1>
+      <p className="font-bold font-serif text-4xl p-5">
+        <h1>Welcome, Antara </h1>
       </p>
       <div className="flex justify-center items-center">
         <p className="text-3xl bg-gray-200 p-6 rounded-xl">
@@ -105,9 +105,9 @@ const Admin = () => {
           address={"/admin/tournament"}
         />
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center my-10">
         <button
-          className="text-3xl bg-gray-200 p-6 rounded-xl"
+          className="text-3xl bg-blue-500 text-white p-6 rounded-xl"
           onClick={handleTournament}
         >
           CREATE TOUNAMENT
