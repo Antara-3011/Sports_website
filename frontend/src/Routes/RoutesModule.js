@@ -10,6 +10,7 @@ import CoachTour from "../Components/Coach/CoachTournament/CoachTour.jsx";
 import Tform from "../Components/Coach/CoachTournament/Register/Tform.jsx";
 import AthleteForm from "../Components/Athlete/AthleteForm.jsx";
 import AdminTour from "../Components/AdminPage/AdminTournament/AdminTour.jsx";
+
 const RoutesModule = () => {
   return (
     <>
