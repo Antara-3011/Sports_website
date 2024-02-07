@@ -115,8 +115,8 @@ export default function TournamentCreateform() {
         </div>
       </nav>
       <div className="flex flex-col justify-center h-full items-center bg-lime-200">
-        <h1 className="font-bold text-3xl mt-2">Create Tournament</h1>
-        <form className="max-w-4xl mx-auto rounded-lg bg-slate-300">
+        <h1 className="font-bold text-3xl p-10">Create Tournament</h1>
+        <form className="max-w-4xl mx-auto rounded-lg bg-slate-300 p-10 mb-10">
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
