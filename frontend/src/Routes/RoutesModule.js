@@ -10,7 +10,7 @@ import CoachTour from "../Components/Coach/CoachTournament/CoachTour.jsx";
 import Tform from "../Components/Coach/CoachTournament/Register/Tform.jsx";
 import AthleteForm from "../Components/Athlete/AthleteForm.jsx";
 import AdminTour from "../Components/AdminPage/AdminTournament/AdminTour.jsx";
-
+import TournamentCreateForm from "../Components/AdminPage/AdminTournament/TournamentCreateform.jsx";
 const RoutesModule = () => {
   return (
     <>
@@ -26,6 +26,10 @@ const RoutesModule = () => {
         <Route path="/admin/tournament" element={<AdminTour />} />
         <Route path="/coach/tournament/register" element={<Tform />} />
         <Route path="/athlete/form" element={<AthleteForm />} />
+        <Route
+          path="/admin/tournament/form"
+          element={<TournamentCreateForm />}
+        />
         {/* <Route path="*" element={<PageNotFound />} /> */}
       </Routes>
     </>
