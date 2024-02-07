@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 import tour1 from "../../Images/tour1.jpg";
 import tour2 from "../../Images/tour2.jpg";
 import tour3 from "../../Images/tour3.jpg";
-
+import tour4 from "../AdminPage/AdminTournament/TournamentCreateform";
 const Admin = () => {
   const navigate = useNavigate();
   const handleTournament = () => {
