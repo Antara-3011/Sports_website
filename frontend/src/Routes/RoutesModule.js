@@ -10,6 +10,8 @@ import CoachTour from "../Components/Coach/CoachTournament/CoachTour.jsx";
 import Tform from "../Components/Coach/CoachTournament/Register/Tform.jsx";
 import AthleteForm from "../Components/Athlete/AthleteForm.jsx";
 import AdminTour from "../Components/AdminPage/AdminTournament/AdminTour.jsx";
+import AthleteTour from "../Components/Athlete/AthleteTournament/AthleteTour.jsx";
+import Seemore from "../Components/Athlete/Seemore.jsx";
 import TournamentCreateForm from "../Components/AdminPage/AdminTournament/TournamentCreateform.jsx";
 const RoutesModule = () => {
   return (
@@ -30,8 +32,11 @@ const RoutesModule = () => {
           path="/admin/tournament/form"
           element={<TournamentCreateForm />}
         />
+        <Route path="/athlete/athletetour" element={<AthleteTour />} />
+        <Route path="/athlete/seemore" element={<Seemore />} />
+        
         {/* <Route path="*" element={<PageNotFound />} /> */}
-      </Routes>
+        </Routes>
     </>
   );
 };
