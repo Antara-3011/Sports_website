@@ -68,7 +68,7 @@ const Signup = () => {
   };
   return (
     <>
-      <div className="">
+      <div className="signup-form">
         <form id="loginForm" onSubmit={handleSubmit}>
           <p className="text-4xl font-bold">Create Account</p>
           <label htmlFor="username" className="form-control w-full max-w-xs">

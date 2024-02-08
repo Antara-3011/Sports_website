@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-const Card = ({ name, address }) => {
+const Card = ({ name, address, image, tourname, dos, venue, reg }) => {
   const navigate = useNavigate();
   const handleButton = () => {
     navigate(address);
@@ -8,17 +8,15 @@ const Card = ({ name, address }) => {
     <>
       <div className="card w-96 bg-base-100 shadow-xl m-5">
         <figure>
-          <img
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
+          <img src={image}></img>
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">ABC Tournament</h2>
+        <div className="card-body text-center">
+          <h2 className="card-title font-serif text-2xl">{tourname}</h2>
 
-          <p>17.01.2024</p>
-          <p>Venue?</p>
-          <p>Reg. Deadline?</p>
+          <p>{dos}</p>
+          <p>{venue}</p>
+          <p className="font-semibold">Reg. Deadline: </p>
+          <p>{reg}</p>
           <div className="card-actions justify-end mt-4">
             <button className="btn btn-primary" onClick={handleButton}>
               {name}

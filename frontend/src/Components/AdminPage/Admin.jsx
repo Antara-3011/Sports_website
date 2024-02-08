@@ -1,6 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
+import tour1 from "../../Images/tour1.jpg";
+import tour2 from "../../Images/tour2.jpg";
+import tour3 from "../../Images/tour3.jpg";
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -68,8 +71,8 @@ const Admin = () => {
           </div>
         </div>
       </nav>
-      <p className="font-bold font-serif text-5xl p-5">
-        <h1>Hey!!! XYZ Admin </h1>
+      <p className="font-bold font-serif text-4xl p-5">
+        <h1>Welcome, Antara </h1>
       </p>
       <div className="flex justify-center items-center">
         <p className="text-3xl bg-gray-200 p-6 rounded-xl">
@@ -77,13 +80,34 @@ const Admin = () => {
         </p>
       </div>
       <div className="flex justify-between">
-        <Card name={"More details"} address={"/admin/tournament"} />
-        <Card name={"More details"} address={"/admin/tournament"} />
-        <Card name={"More details"} address={"/admin/tournament"} />
+        <Card
+          name={"More details"}
+          image={tour1}
+          tourname={"Dojo Inhouse Tournament"}
+          dos={"February 10, 2024"}
+          venue={"Kenwyn Martial arts centre, South Africa"}
+          address={"/admin/tournament"}
+        />
+        <Card
+          name={"More details"}
+          image={tour2}
+          tourname={"Inter District Open Karate Championship"}
+          dos={"February 11, 2024"}
+          venue={"TDP Hall, near India Spring School, India"}
+          address={"/admin/tournament"}
+        />
+        <Card
+          name={"More details"}
+          image={tour3}
+          tourname={"Eagles Karate Challenge"}
+          dos={"February 17, 2024"}
+          venue={"Tshwane Korfball Park, South Africa"}
+          address={"/admin/tournament"}
+        />
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center my-10">
         <button
-          className="text-3xl bg-gray-200 p-6 rounded-xl"
+          className="text-3xl bg-blue-500 text-white p-6 rounded-xl"
           onClick={handleTournament}
         >
           CREATE TOUNAMENT
