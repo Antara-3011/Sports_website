@@ -1,5 +1,32 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const handleUpload = (event) => {
+    event.preventDefault();
+
+    if (!selectedFile) {
+      return alert("Please select an Excel file to upload.");
+    } else {
+      setIsOpen(false);
+      return alert("Successfully uploaded");
+    }
+    // const reader = new FileReader();
+    // reader.onload = (e) => {
+    //   // Process the uploaded Excel data (e.target.result)
+    //   console.log("Excel data:", e.target.result);
+    // };
+    // reader.readAsText(selectedFile);
+  };
   return (
     <>
       <div className="navbar bg-base-100">
@@ -54,6 +81,51 @@ const Header = () => {
             ></path>
           </svg>
           <a className="btn btn-ghost text-xl">Martial Tour</a>
+        </div>
+        <div>
+          <button onClick={() => setIsOpen(true)}>Upload Excel File</button>
+          {isOpen && (
+            <div className="fixed top-0 left-0 w-full h-full bg-gray-800 opacity-90 z-50">
+              <div className="container mx-auto p-4 bg-white rounded shadow-md">
+                <form onSubmit={handleUpload}>
+                  <label
+                    htmlFor="participant-list-upload"
+                    className="block my-3 font-bold"
+                  >
+                    Upload Participant List (Excel):
+                  </label>
+                  <div className="flex items-center mb-3">
+                    <input
+                      type="file"
+                      id="participant-list-upload"
+                      name="participantList"
+                      className="block w-full p-2 text-gray-700 border border-gray-300 rounded-md focus:ring focus:ring-blue-500 focus:border-blue-500"
+                      onChange={handleFileChange}
+                      accept=".xlsx, .xls, .csv"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      className="ml-3 px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-700 focus:ring focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50"
+                    >
+                      Upload
+                    </button>
+                  </div>
+                  {selectedFile && (
+                    <p className="text-gray-500">
+                      Selected file: {selectedFile.name}
+                    </p>
+                  )}
+                </form>
+                <button
+                  onClick={handleClose}
+                  className="bg-black text-white p-2 rounded-lg mt-4"
+                >
+                  X Close
+                </button>
+              </div>
+            </div>
+          )}
         </div>
         {/* upload */}
         <div className="flex-none">
