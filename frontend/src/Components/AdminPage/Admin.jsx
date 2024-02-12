@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
 import tour1 from "../../Images/tour1.jpg";
 import tour2 from "../../Images/tour2.jpg";
 import tour3 from "../../Images/tour3.jpg";
+import TourCard from "./AdminTournament/TournamentCard/TourCard";
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -80,7 +80,7 @@ const Admin = () => {
         </p>
       </div>
       <div className="flex justify-between">
-        <Card
+        <TourCard
           name={"More details"}
           image={tour1}
           tourname={"Dojo Inhouse Tournament"}
@@ -88,7 +88,7 @@ const Admin = () => {
           venue={"Kenwyn Martial arts centre, South Africa"}
           address={"/admin/tournament"}
         />
-        <Card
+        <TourCard
           name={"More details"}
           image={tour2}
           tourname={"Inter District Open Karate Championship"}
@@ -96,7 +96,7 @@ const Admin = () => {
           venue={"TDP Hall, near India Spring School, India"}
           address={"/admin/tournament"}
         />
-        <Card
+        <TourCard
           name={"More details"}
           image={tour3}
           tourname={"Eagles Karate Challenge"}
