@@ -81,27 +81,30 @@ const Admin = () => {
       </div>
       <div className="flex justify-between">
         <TourCard
-          name={"More details"}
+          name={"More Details"}
           image={tour1}
           tourname={"Dojo Inhouse Tournament"}
           dos={"February 10, 2024"}
           venue={"Kenwyn Martial arts centre, South Africa"}
+          reg={"Thu 8 February 2024 11.59 pm SAST"}
           address={"/admin/tournament"}
         />
         <TourCard
-          name={"More details"}
+          name={"More Details"}
           image={tour2}
           tourname={"Inter District Open Karate Championship"}
           dos={"February 11, 2024"}
           venue={"TDP Hall, near India Spring School, India"}
+          reg={"Sat 10 February 2024 11.59 pm IST"}
           address={"/admin/tournament"}
         />
         <TourCard
-          name={"More details"}
+          name={"More Details"}
           image={tour3}
           tourname={"Eagles Karate Challenge"}
           dos={"February 17, 2024"}
           venue={"Tshwane Korfball Park, South Africa"}
+          reg={"Thu 15 February 2024 11.59 pm SAST"}
           address={"/admin/tournament"}
         />
       </div>
