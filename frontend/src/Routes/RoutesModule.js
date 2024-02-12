@@ -13,6 +13,7 @@ import AdminTour from "../Components/AdminPage/AdminTournament/AdminTour.jsx";
 import AthleteTour from "../Components/Athlete/AthleteTournament/AthleteTour.jsx";
 import Seemore from "../Components/Athlete/Seemore.jsx";
 import TournamentCreateForm from "../Components/AdminPage/AdminTournament/TournamentCreateform.jsx";
+import TourCard from "../Components/AdminPage/AdminTournament/TournamentCard/TourCard.jsx";
 const RoutesModule = () => {
   return (
     <>
@@ -33,10 +34,11 @@ const RoutesModule = () => {
           element={<TournamentCreateForm />}
         />
         <Route path="/athlete/athletetour" element={<AthleteTour />} />
+        <Route path="/admin/tournament/card" element={<TourCard />} />
         <Route path="/athlete/seemore" element={<Seemore />} />
-        
+
         {/* <Route path="*" element={<PageNotFound />} /> */}
-        </Routes>
+      </Routes>
     </>
   );
 };
