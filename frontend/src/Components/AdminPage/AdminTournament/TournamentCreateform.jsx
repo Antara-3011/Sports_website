@@ -88,6 +88,7 @@ export default function TournamentCreateform() {
               </svg>
               <a className="btn btn-ghost text-xl">Martial Tour</a>
             </div>
+
             <div className="flex items-center">
               <svg
                 data-name="Instagram w/circle"

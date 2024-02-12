@@ -1,6 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import "./left.css";
-import { Link } from "react-router-dom";
+
 const LeftColumn = () => {
+  const navigate = useNavigate();
+  const tournamentUpdate = () => {
+    navigate("/admin/tournament/form");
+  };
   return (
     <>
       <div className="left-column-admin flex flex-col justify-around">
@@ -36,6 +41,12 @@ const LeftColumn = () => {
           </p>
         </div>
         <button className="btn-left-admin bg-red-600">Cancel Tournament</button>
+        <button
+          className="btn-left-admin bg-cyan-500 hover:bg-cyan-600 ..."
+          onClick={tournamentUpdate}
+        >
+          Update Tournament
+        </button>
         {/* <div className="details-admin">
           <p className="font-bold font-serif text-xl">Hosted by: </p>
           <p>Sthitapragyan Rout</p>
